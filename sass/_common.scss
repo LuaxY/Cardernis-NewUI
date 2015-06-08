@@ -1,0 +1,29 @@
+* {
+    color: $text-color;
+    font-family: $text-font;
+    box-sizing: border-box;
+}
+
+body {
+
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 1100px;
+}
+
+div {
+    margin: 0 auto;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
