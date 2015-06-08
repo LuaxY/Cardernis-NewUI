@@ -44,7 +44,6 @@
     }
 
     .forum-content {
-        height: 500px;
         background-color: #F9F9F9;
         border-top: 1px solid #E5E5E5;
         border-bottom: 3px solid #ECECEC;
@@ -70,6 +69,11 @@
                 padding-top: 10px;
                 @include border-radius(3px);
                 @include box-shadow(rgba(185,185,185,0.5) 0 1px 4px 1px);
+                @include transition(box-shadow 0.2s ease-in-out);
+
+                &:hover {
+                    @include box-shadow(rgba(99, 99, 99, 0.5) 0 1px 4px 1px);
+                }
 
                 &:first-child {
                     margin-left: 2px;
@@ -79,13 +83,9 @@
                     margin-right: 2px;
                 }
 
-                img {
-                    @include transition-duration(0.3s);
-                }
-
-                &:hover img {
-                    /*@include animation(heart 1.5s infinite);*/
-                }
+                /*&:hover img {
+                    @include animation(heart 1.5s infinite);
+                }*/
 
                 .forum-category-icon {
                     width: 100%;
