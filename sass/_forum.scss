@@ -71,9 +71,46 @@
                 background-color: #fff;
                 position: relative;
                 text-align: center;
-                margin: 15px;
+                margin: 17.8px;
+                padding-top: 10px;
                 @include border-radius(3px);
                 @include box-shadow(rgba(185,185,185,0.5) 0 1px 4px 1px);
+
+                &:first-child {
+                    margin-left: 2px;
+                }
+
+                &:last-child {
+                    margin-right: 2px;
+                }
+
+                img {
+                    @include transition-duration(0.3s);
+                }
+
+                &:hover img {
+                    @include animation(heart 1.5s infinite);
+                }
+
+                .forum-category-icon {
+                    width: 100%;
+                    height: 66px;
+                }
+
+                h3.forum-category-name {
+                    color: #2a2f35;
+                    font-weight: bold;
+                    margin-bottom: 5px;
+                }
+
+                .forum-category-last {
+                    height: 44px;
+                    padding: 0 5px;
+                    color: #9e9e9e;
+                    list-style: 18px;
+                    overflow: hidden;
+                    font-size: 14px;
+                }
             }
         }
     }
