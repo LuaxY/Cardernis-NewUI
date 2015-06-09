@@ -132,6 +132,16 @@
                 text-decoration: underline;
             }
 
+            &.forum.is-unread .forum-col-status i,
+            &.topic.is-unread .forum-table-name a {
+                color: #404852;
+            }
+
+            &.forum.is-read .forum-col-status i,
+            &.topic.is-read .forum-table-name a {
+                color: #9e9e9e;
+            }
+
             td {
                 padding: 7px 13px;
                 border: 1px solid #e8e8e8;
@@ -167,10 +177,6 @@
                 &.forum-col-status {
                     width: 60px;
                     font-size: 23px;
-
-                    &.is-read i {
-                        color: #9e9e9e;
-                    }
                 }
 
                 img {
@@ -178,7 +184,8 @@
                     height: 50px;
                 }
 
-                .forum-table-name a {
+                .forum-table-name a,
+                &.forum-col-last-reply a {
                     text-decoration: none;
 
                     &:hover {
