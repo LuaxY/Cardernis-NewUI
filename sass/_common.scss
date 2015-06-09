@@ -41,3 +41,32 @@ h1.title {
 .img-circle {
   border-radius: 50%;
 }
+
+.btn {
+    display: inline-block;
+    background-color: #3498db;
+    color: #fff;
+    font-weight: bold;
+    height: 34px;
+    line-height: 30px;
+    border: 2px solid #3498db;
+    padding: 0 15px;
+    font-size: 13px;
+    @include border-radius(5px);
+    @include transition(background-color 0.1s ease-in-out);
+
+    &:hover {
+        background-color: transparent !important;
+        border: 2px solid #3498db;
+        cursor: pointer;
+        color: #3498db;
+
+        .fa {
+            color: #3498db;
+        }
+    }
+
+    .fa {
+        color: #fff;
+    }
+}

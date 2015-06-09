@@ -8,7 +8,7 @@ header {
 
     #logo {
         width: 90px;
-        height: $header-height;
+        height: 100%;
         background-color: #3498db;
         float: left;
         margin-right: 10px;
@@ -42,6 +42,27 @@ header {
 
                 &.active,
                 &:hover {
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .infos {
+        height: 100%;
+        float: right;
+        @include order(3);
+
+        .btn {
+            margin: 14px 14px 0 0;
+
+            &.register {
+                background-color: transparent;
+                border-color: #6D7A8B;
+                color: #6D7A8B;
+
+                &:hover {
+                    border-color: #fff;
                     color: #fff;
                 }
             }
