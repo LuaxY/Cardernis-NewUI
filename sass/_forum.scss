@@ -122,7 +122,7 @@
                 font-size: 16px;
                 font-weight: bold;
                 vertical-align: middle;
-                border: 1px solid #e2e2e2;
+                border: 1px solid #e8e8e8;
                 border-bottom: none;
                 padding: 7px 13px;
                 border-collapse: collapse !important;
@@ -138,7 +138,7 @@
 
                 td {
                     padding: 7px 13px;
-                    border: 1px solid #e2e2e2;
+                    border: 1px solid #e8e8e8;
                     border-top: none;
                     vertical-align: middle;
 
@@ -176,6 +176,51 @@
                     }
                 }
             }
+        }
+    }
+
+    .tags {
+        margin-left: 5px;
+
+        .tag {
+            padding: 4px 6px;
+            font-weight: bold;
+            font-size: 11px;
+            line-height: 11px;
+            /*text-transform: uppercase;*/
+            display: inline-block;
+            vertical-align: middle;
+            @include border-radius(3px);
+        }
+
+        .tag-cpp {
+            background-color: #0052cc;
+            color: #fff;
+        }
+
+        .tag-csharp {
+            background-color: #5319e7;
+            color: #fff;
+        }
+
+        .tag-as3 {
+            background-color: #fbca04;
+            color: #000;
+        }
+
+        .tag-client {
+            background-color: #e11d21;
+            color: #fff;
+        }
+
+        .tag-server {
+            background-color: #eb6420;
+            color: #fff;
+        }
+
+        .tag-bot {
+            background-color: #009800;
+            color: #fff;
         }
     }
 }
