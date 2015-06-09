@@ -108,5 +108,74 @@
                 }
             }
         }
+
+        .forum-table {
+            width: 100%;
+            text-align: left;
+            border-collapse: collapse !important;
+            border-spacing: 0;
+            background-color: #fff;
+            margin: 10px 0 40px 0 ;
+
+            th {
+                color: #3f4751;
+                font-size: 16px;
+                font-weight: bold;
+                vertical-align: middle;
+                border: 1px solid #e2e2e2;
+                border-bottom: none;
+                padding: 7px 13px;
+                border-collapse: collapse !important;
+                @include border-radius(3px);
+            }
+
+            tr.topic {
+                font-size: 14px;
+
+                &:nth-child(2n) {
+                    background-color: #f9f9f9;
+                }
+
+                td {
+                    padding: 7px 13px;
+                    border: 1px solid #e2e2e2;
+                    border-top: none;
+                    vertical-align: middle;
+
+                    &.forum-col-image {
+                        width: 60px;
+                    }
+
+                    &.forum-col-reply {
+                        width: 140px;
+                        color: #9e9e9e;
+                    }
+
+                    &.forum-col-last {
+                        width: 230px;
+                    }
+
+                    img {
+                        width: 50px;
+                        height: 50px;
+                    }
+
+                    .forum-table-name a {
+                        text-decoration: none;
+                        color: #404852;
+
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+
+                    .forum-table-meta {
+                        font-size: 11px;
+                        color: #9e9e9e;
+                        margin-top: 5px;
+                    }
+                }
+            }
+        }
     }
 }
