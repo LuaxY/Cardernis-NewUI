@@ -60,6 +60,7 @@ header {
                 background-color: transparent;
                 border-color: #6D7A8B;
                 color: #6D7A8B;
+                @include transition(all 0.1s ease-in-out);
 
                 &:hover {
                     border-color: #fff;

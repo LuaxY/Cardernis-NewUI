@@ -53,7 +53,7 @@ h1.title {
     padding: 0 15px;
     font-size: 13px;
     @include border-radius(5px);
-    @include transition(background-color 0.1s ease-in-out);
+    @include transition(all 0.1s ease-in-out);
 
     &:hover {
         background-color: transparent !important;
