@@ -248,19 +248,50 @@
                         padding: 5px 0;
                     }
                 }
+
+                &.deleted {
+                    opacity: 0.5;
+                }
             }
+        }
+
+        .forum-post-actions,
+        .forum-post-status {
+            background-color: #ededed;
+            padding: 15px;
+            overflow: auto;
         }
 
         .forum-post-actions {
             border-top: 1px solid #e3e3e3;
-            background-color: #ededed;
-            padding: 15px;
-            overflow: auto;
 
             i {
                 font-size: 20px;
                 margin-right: 10px;
                 color: #a7b3c2;
+                @include transition(color 0.2s ease-in-out);
+
+                &:hover {
+                    color: #404852;
+                }
+            }
+        }
+
+        .forum-post-status {
+            border-bottom: 1px solid #e3e3e3;
+
+            &.best-answer,
+            &.best-answer i {
+                color: #93c744;
+                border-color: #c2de9a;
+                background-color: #e9f2de;
+            }
+
+            &.deleted,
+            &.deleted i {
+                color: #c74444;
+                border-color: #de9a9a;
+                background-color: #f2dede;
             }
         }
     }
