@@ -216,7 +216,6 @@
                 width: 54px;
                 height: 54px;
                 padding: 3px;
-                top: 5px;
                 left: 5px;
             }
         }
@@ -225,6 +224,20 @@
             margin: 0 0 10px 70px;
             @include border-radius(4px);
             border: 1px solid #dddddd;
+
+            &::before {
+                position: absolute;
+                width: 10px;
+                height: 10px;
+                left: 65px;
+                top: 19px;
+                border-top: 1px solid #dddddd;
+                border-left: 1px solid #dddddd;
+                background-color: #fff;
+                display: block;
+                content: "";
+                @include rotate(-45deg);
+            }
 
             .forum-post-body {
                 background-color: #fff;
@@ -279,20 +292,28 @@
 
         .forum-post-status {
             border-bottom: 1px solid #e3e3e3;
+        }
 
-            &.best-answer,
-            &.best-answer i {
-                color: #93c744;
-                border-color: #c2de9a;
-                background-color: #e9f2de;
-            }
+        &.best-answer .forum-post-status,
+        &.best-answer .forum-post-status i {
+            color: #93c744;
+            border-color: #c2de9a;
+            background-color: #e9f2de;
+        }
 
-            &.deleted,
-            &.deleted i {
-                color: #c74444;
-                border-color: #de9a9a;
-                background-color: #f2dede;
-            }
+        &.deleted .forum-post-status,
+        &.deleted .forum-post-status i {
+            color: #c74444;
+            border-color: #de9a9a;
+            background-color: #f2dede;
+        }
+
+        &.best-answer .forum-post-content::before {
+            background-color: #e9f2de;
+        }
+
+        &.deleted .forum-post-content::before {
+            background-color: #f2dede;
         }
     }
 }
