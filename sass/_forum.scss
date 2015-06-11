@@ -110,7 +110,7 @@
             font-size: 16px;
             font-weight: bold;
             vertical-align: middle;
-            border: 1px solid #e8e8e8;
+            border: 1px solid #dfdfdf;
             border-bottom: none;
             padding: 7px 13px;
             border-collapse: collapse !important;
@@ -121,7 +121,7 @@
             font-size: 14px;
 
             &.forum:first-child {
-                border-top: 1px solid #e8e8e8;
+                border-top: 1px solid #dfdfdf;
             }
 
             &:nth-child(2n) {
@@ -144,7 +144,7 @@
 
             td {
                 padding: 7px 13px;
-                border: 1px solid #e8e8e8;
+                border: 1px solid #dfdfdf;
                 border-top: none;
                 vertical-align: middle;
 
@@ -222,8 +222,8 @@
 
         .forum-post-content {
             margin: 0 0 10px 70px;
-            @include border-radius(4px);
-            border: 1px solid #dddddd;
+            @include border-radius(3px);
+            border: 1px solid #cdcdcd;
 
             &::before {
                 position: absolute;
@@ -231,8 +231,8 @@
                 height: 10px;
                 left: 65px;
                 top: 19px;
-                border-top: 1px solid #dddddd;
-                border-left: 1px solid #dddddd;
+                border-top: 1px solid #cdcdcd;
+                border-left: 1px solid #cdcdcd;
                 background-color: #fff;
                 display: block;
                 content: "";
@@ -261,10 +261,6 @@
                         padding: 5px 0;
                     }
                 }
-
-                &.deleted {
-                    opacity: 0.5;
-                }
             }
         }
 
@@ -276,7 +272,7 @@
         }
 
         .forum-post-actions {
-            border-top: 1px solid #e3e3e3;
+            border-top: 1px solid #dddddd;
 
             i {
                 font-size: 20px;
@@ -296,7 +292,7 @@
 
         &.best-answer .forum-post-status,
         &.best-answer .forum-post-status i {
-            color: #93c744;
+            color: #81af3d;
             border-color: #c2de9a;
             background-color: #e9f2de;
         }
@@ -314,6 +310,10 @@
 
         &.deleted .forum-post-content::before {
             background-color: #f2dede;
+        }
+
+        &.deleted .forum-post-body {
+            opacity: 0.5;
         }
     }
 }
